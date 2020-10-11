@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root">
+
+    </div>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <!-- 编译jsx -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</body>
+
+    <script type="text/babel">
+        //创建一个h1元素 ,
+        // var span = React.createElement("span",{},"一个P元素")
+        var span = <span> 一个span元素</span>
+        // var h1 = React.createElement("h1",{
+        //     title:"第一个React元素"
+        // },"hello world",span);
+        var h1 = <h1 title="h1元素"> hello world {span}</h1>
+        console.log(h1)
+        //ReactDOM负责把react元素渲染到页面上
+        ReactDOM.render(h1,document.getElementById("root"));
+
+    </script>
+</html>
