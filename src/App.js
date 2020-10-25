@@ -1,11 +1,16 @@
 import React from "react"
-import StudentContainer from "./components/StudentContainer"
-
-
-export default function App() {
-  return (
-    <div>
-      <StudentContainer/>
-    </div>
-  )
+import {BrowserRouter as Router,Switch,Route} from "react-router-dom"
+import Login from "./pages/Login"
+import Admin from "./pages/Admin"
+export default function App(){
+    return (
+      <div>
+      <Router>  
+          <Switch>
+              <Route path ="/login" exact component={Login}/>
+              <Route  path ="/" component={Admin} />
+          </Switch>
+      </Router>
+      </div>
+    )
 }
